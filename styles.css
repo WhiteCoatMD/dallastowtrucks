@@ -120,6 +120,24 @@ a:hover {
     gap: 15px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    color: #ff6b00;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 .logo h2 {
     color: #ff6b00;
     font-size: 1.5rem;
@@ -158,8 +176,32 @@ a:hover {
 .hero {
     background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
     color: white;
-    padding: 80px 20px;
-    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
@@ -171,16 +213,12 @@ a:hover {
 .hero-subtitle {
     font-size: 1.3rem;
     margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     opacity: 0.95;
 }
 
 .hero-cta {
     display: flex;
     gap: 15px;
-    justify-content: center;
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
@@ -188,7 +226,6 @@ a:hover {
 .hero-features {
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -279,6 +316,19 @@ a:hover {
 .why-choose-us {
     padding: 80px 20px;
     background-color: white;
+}
+
+.why-choose-image-wrapper {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.feature-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .benefits-grid {
@@ -667,6 +717,14 @@ a:hover {
         text-align: center;
     }
 
+    .logo-text {
+        display: none;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -674,6 +732,19 @@ a:hover {
 
     .hero {
         padding: 60px 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
     }
 
     .hero h1 {
@@ -687,6 +758,7 @@ a:hover {
     .hero-cta {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .hero-cta .btn {
